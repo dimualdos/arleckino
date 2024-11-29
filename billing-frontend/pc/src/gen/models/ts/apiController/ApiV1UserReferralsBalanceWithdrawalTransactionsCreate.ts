@@ -1,0 +1,12 @@
+import type { WithdrawalTransactionCreate } from "../WithdrawalTransactionCreate"
+
+export type ApiV1UserReferralsBalanceWithdrawalTransactionsCreate201 = WithdrawalTransactionCreate
+
+export type ApiV1UserReferralsBalanceWithdrawalTransactionsCreateMutationRequest = WithdrawalTransactionCreate
+
+export type ApiV1UserReferralsBalanceWithdrawalTransactionsCreateMutationResponse = WithdrawalTransactionCreate
+export namespace ApiV1UserReferralsBalanceWithdrawalTransactionsCreateMutation {
+  export type Response = ApiV1UserReferralsBalanceWithdrawalTransactionsCreateMutationResponse
+  export type Request = ApiV1UserReferralsBalanceWithdrawalTransactionsCreateMutationRequest
+  export type Errors = ApiV1UserReferralsBalanceWithdrawalTransactionsCreate201
+}

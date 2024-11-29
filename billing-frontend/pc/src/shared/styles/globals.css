@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 35 100% 50%;
+    --accent-muted: 26.79 100% 78.04%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 4.1 76.47% 70%;
+    --destructive-foreground: 0 0% 100%;
+
+    --green: 111 97% 42%;
+    --green-soft: 133 100% 96%;
+
+    --valid: 111.84 96.26% 41.96%;
+    --valid-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 214.3 31.8% 81.4%;
+    --ring: 26.79 100% 78.04%;
+    --radius: 0.5rem;
+
+    --blue: 211.74 91.72% 66.86%;
+    --blue-soft: 230 100% 97.65%;
+    --blue-foreground: 0 0% 100%;
+
+    --grey: 0 0% 74.9%;
+    --grey-hard: 0 0% 58.04%;
+    --grey-extra-hard: 0 0% 47.45%;
+    --grey-soft: 0 0% 85.1%;
+    --grey-extra-soft: 0 0% 96.08%;
+    --grey-foreground: 0 0% 100%;
+
+    --purple: 230.86 48.84% 57.84%;
+    --purple-hard: 254.72 56.99% 18.24%;
+    --purple-soft: 230 100% 98%;
+    --purple-foreground: 0 0% 100%;
+
+    --yellow-soft: 47.44 100% 91.57%;
+    --yellow-foreground: 0 0% 0%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body,
+  a,
+  button,
+  input,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="url"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="checkbox"],
+  input[type="radio"],
+  input::placeholder,
+  select,
+  select[multiple],
+  textarea,
+  textarea::placeholder {
+    @apply text-base text-foreground;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+
+  table {
+    font-weight: normal;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1248px];
+  }
+}
+
+.dots {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAMAAABIdo1RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NEY0N0FGMzBBRjMxMUUyODY3NUY4RTM1QUI3QkFDNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NEY0N0FGNDBBRjMxMUUyODY3NUY4RTM1QUI3QkFDNSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0RjQ3QUYxMEFGMzExRTI4Njc1RjhFMzVBQjdCQUM1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0RjQ3QUYyMEFGMzExRTI4Njc1RjhFMzVBQjdCQUM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+vh2oXAAAAAZQTFRF////ERERcU8Z2wAAABJJREFUeNpiYGRkYGAAEQABBgAAIgAFjnN1FgAAAABJRU5ErkJggg==)
+    left center repeat-x;
+}
+
+.shaddow-bold {
+  text-shadow: 0.5px 0 0 currentColor;
+}
+
+.toast div[data-icon] {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-list > * {
+  position: relative;
+}
+
+.custom-list > *::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 100%;
+}
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #edf2f7;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 100vh;
+    border: 2px solid #edf2f7;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+  }
+}
+.gradient-for-any-player {
+  background: radial-gradient(96.06% 96.06% at 50% 99.13%, #0947b8 29.46%, #031239 100%);
+  transform: rotate(-180deg);
+}
+
+.typography a {
+  @apply text-accent;
+}
+.typography p,
+.typography .accent {
+  @apply mb-6;
+}
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6 {
+  @apply mb-0.5 text-2xl font-semibold;
+}
+.typography b {
+  @apply font-bold;
+}
+.typography ul,
+.typography ol {
+  @apply mb-6;
+}
+.typography ol {
+  @apply list-inside list-disc pl-2;
+}
+.typography hr {
+  @apply my-6 bg-grey-soft;
+}
+.typography > *:last-child {
+  margin-bottom: 0;
+}
+.typography .accent {
+  @apply rounded-lg bg-background p-10 text-purple md:bg-blue-soft md:p-6;
+}
+
+/* EMBA START */
+.embla {
+  /* padding: 1.6rem; */
+}
+.embla__viewport {
+}
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y;
+}
+.embla__slide {
+  min-width: 0;
+  position: relative;
+}
+/* EMBA END */

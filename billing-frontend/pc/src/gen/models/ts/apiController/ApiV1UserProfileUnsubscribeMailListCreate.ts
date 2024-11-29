@@ -1,0 +1,12 @@
+import type { UserProfileUnsubscribeMailList } from "../UserProfileUnsubscribeMailList"
+
+export type ApiV1UserProfileUnsubscribeMailListCreate201 = UserProfileUnsubscribeMailList
+
+export type ApiV1UserProfileUnsubscribeMailListCreateMutationRequest = UserProfileUnsubscribeMailList
+
+export type ApiV1UserProfileUnsubscribeMailListCreateMutationResponse = UserProfileUnsubscribeMailList
+export namespace ApiV1UserProfileUnsubscribeMailListCreateMutation {
+  export type Response = ApiV1UserProfileUnsubscribeMailListCreateMutationResponse
+  export type Request = ApiV1UserProfileUnsubscribeMailListCreateMutationRequest
+  export type Errors = ApiV1UserProfileUnsubscribeMailListCreate201
+}

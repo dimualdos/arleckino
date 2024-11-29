@@ -1,0 +1,12 @@
+import type { HelpDeskCaseCopyrightHolderCreate } from "../HelpDeskCaseCopyrightHolderCreate"
+
+export type ApiV1HelpdeskCasesCopyrightHolderCreate201 = HelpDeskCaseCopyrightHolderCreate
+
+export type ApiV1HelpdeskCasesCopyrightHolderCreateMutationRequest = HelpDeskCaseCopyrightHolderCreate
+
+export type ApiV1HelpdeskCasesCopyrightHolderCreateMutationResponse = HelpDeskCaseCopyrightHolderCreate
+export namespace ApiV1HelpdeskCasesCopyrightHolderCreateMutation {
+  export type Response = ApiV1HelpdeskCasesCopyrightHolderCreateMutationResponse
+  export type Request = ApiV1HelpdeskCasesCopyrightHolderCreateMutationRequest
+  export type Errors = ApiV1HelpdeskCasesCopyrightHolderCreate201
+}

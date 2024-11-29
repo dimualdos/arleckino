@@ -1,0 +1,40 @@
+stages:
+  - lint
+  - build_js_prod
+  - build_js_staging
+
+
+eslint:
+  image: node:lts-alpine3.20
+  stage: lint
+  except:
+    - staging
+  script:
+    - ci/scripts/entrypoint_lint.sh
+
+
+Build js prod:
+  stage: build_js_prod
+  only:
+    - master
+  dependencies:
+    - eslint
+  image: node:lts-alpine3.20
+  script:
+    - ci/scripts/entrypoint_ui.sh
+    - apk add gnupg rsync openssh
+    - gpg --yes --batch --passphrase=$GPG_SECRET_KEY ci/ssh.key.gpg
+    - chmod 0600 ci/ssh.key
+    - rsync -av --delete-after -e "ssh -o StrictHostKeyChecking=no -i ci/ssh.key" pc/build/ $CI_COMMIT_BRANCH.arlekino.tv:/var/www/$CI_COMMIT_BRANCH.arlekino.tv/front/
+
+Build js staging:
+  stage: build_js_staging
+  only:
+    - staging
+  image: docker
+  script:
+    - export DOCKER_HOST=tcp://89.187.165.79:2375
+    - cd pc
+    - docker build -t arlekinotv-fronend . -f ../ci/Dockerfile
+    - docker kill arlekinotv-fronend || true
+    - docker run --rm --name arlekinotv-fronend -d -p 127.0.0.1:3000:3000 arlekinotv-fronend

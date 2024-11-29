@@ -1,0 +1,12 @@
+import type { UserProfileChangeEmailRequestNew } from "../UserProfileChangeEmailRequestNew"
+
+export type ApiV1UserProfileChangeEmailRequestNewCreate201 = UserProfileChangeEmailRequestNew
+
+export type ApiV1UserProfileChangeEmailRequestNewCreateMutationRequest = UserProfileChangeEmailRequestNew
+
+export type ApiV1UserProfileChangeEmailRequestNewCreateMutationResponse = UserProfileChangeEmailRequestNew
+export namespace ApiV1UserProfileChangeEmailRequestNewCreateMutation {
+  export type Response = ApiV1UserProfileChangeEmailRequestNewCreateMutationResponse
+  export type Request = ApiV1UserProfileChangeEmailRequestNewCreateMutationRequest
+  export type Errors = ApiV1UserProfileChangeEmailRequestNewCreate201
+}

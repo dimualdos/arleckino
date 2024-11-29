@@ -1,0 +1,12 @@
+import type { WithdrawalWalletConfirm } from "../WithdrawalWalletConfirm"
+
+export type ApiV1UserProfileWithdrawalWalletsConfirmCreate201 = WithdrawalWalletConfirm
+
+export type ApiV1UserProfileWithdrawalWalletsConfirmCreateMutationRequest = WithdrawalWalletConfirm
+
+export type ApiV1UserProfileWithdrawalWalletsConfirmCreateMutationResponse = WithdrawalWalletConfirm
+export namespace ApiV1UserProfileWithdrawalWalletsConfirmCreateMutation {
+  export type Response = ApiV1UserProfileWithdrawalWalletsConfirmCreateMutationResponse
+  export type Request = ApiV1UserProfileWithdrawalWalletsConfirmCreateMutationRequest
+  export type Errors = ApiV1UserProfileWithdrawalWalletsConfirmCreate201
+}

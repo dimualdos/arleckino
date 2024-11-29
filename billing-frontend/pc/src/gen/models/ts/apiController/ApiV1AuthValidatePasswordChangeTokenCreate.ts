@@ -1,0 +1,12 @@
+import type { ValidatePasswordChangeToken } from "../ValidatePasswordChangeToken"
+
+export type ApiV1AuthValidatePasswordChangeTokenCreate201 = ValidatePasswordChangeToken
+
+export type ApiV1AuthValidatePasswordChangeTokenCreateMutationRequest = ValidatePasswordChangeToken
+
+export type ApiV1AuthValidatePasswordChangeTokenCreateMutationResponse = ValidatePasswordChangeToken
+export namespace ApiV1AuthValidatePasswordChangeTokenCreateMutation {
+  export type Response = ApiV1AuthValidatePasswordChangeTokenCreateMutationResponse
+  export type Request = ApiV1AuthValidatePasswordChangeTokenCreateMutationRequest
+  export type Errors = ApiV1AuthValidatePasswordChangeTokenCreate201
+}

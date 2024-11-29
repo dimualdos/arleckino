@@ -1,0 +1,22 @@
+import client from "@/src/axios-client"
+import type { ResponseConfig } from "@/src/axios-client"
+import type {
+  ApiV1ServiceAdminMinistraUpdateChannelsCreateMutationResponse,
+  ApiV1ServiceAdminMinistraUpdateChannelsCreatePathParams,
+} from "../../../models/ts/apiController/ApiV1ServiceAdminMinistraUpdateChannelsCreate"
+
+/**
+ * @description Список сообщений **message_type**:* **ministra_server_not_found_by_id**Сервер Ministra с указанным ID не обнаружен.* **ministra_server_custom_api_params_empty**Для сервера Ministra не указаны параметры подключения к Custom API.* **ministra_server_custom_api_url_is_incorrect**Для сервера Ministra неверно указан URL подключения к Custom API.
+ * @summary Обновление списка жанров и каналов сервера Ministra в соответствии с группами и каналами плейлиста по умолчанию
+ * @link /api/v1/service/admin/ministra/:id/update-channels/ */
+export async function apiV1ServiceAdminMinistraUpdateChannelsCreate(
+  { id }: ApiV1ServiceAdminMinistraUpdateChannelsCreatePathParams,
+  options: Partial<Parameters<typeof client>[0]> = {},
+): Promise<ResponseConfig<ApiV1ServiceAdminMinistraUpdateChannelsCreateMutationResponse>> {
+  const res = await client<ApiV1ServiceAdminMinistraUpdateChannelsCreateMutationResponse>({
+    method: "post",
+    url: `/api/v1/service/admin/ministra/${id}/update-channels/`,
+    ...options,
+  })
+  return res
+}

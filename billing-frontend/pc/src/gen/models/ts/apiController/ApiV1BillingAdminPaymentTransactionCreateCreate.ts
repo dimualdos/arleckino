@@ -1,0 +1,12 @@
+import type { PaymentTransactionAdminReplenishment } from "../PaymentTransactionAdminReplenishment"
+
+export type ApiV1BillingAdminPaymentTransactionCreateCreate201 = PaymentTransactionAdminReplenishment
+
+export type ApiV1BillingAdminPaymentTransactionCreateCreateMutationRequest = PaymentTransactionAdminReplenishment
+
+export type ApiV1BillingAdminPaymentTransactionCreateCreateMutationResponse = PaymentTransactionAdminReplenishment
+export namespace ApiV1BillingAdminPaymentTransactionCreateCreateMutation {
+  export type Response = ApiV1BillingAdminPaymentTransactionCreateCreateMutationResponse
+  export type Request = ApiV1BillingAdminPaymentTransactionCreateCreateMutationRequest
+  export type Errors = ApiV1BillingAdminPaymentTransactionCreateCreate201
+}

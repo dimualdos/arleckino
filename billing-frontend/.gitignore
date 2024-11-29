@@ -1,0 +1,10 @@
+.cache/*
+.idea/*
+node_modules/
+package-lock.json
+pc/yarn.lock
+pc/node_modules/*
+pc/build/*
+pc/.idea/*
+pc/.next/*
+.vscode/settings.json
